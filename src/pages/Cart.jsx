@@ -39,7 +39,7 @@ const Cart = () => {
                     <td>
                       <Link to={`/product/${e.product._id}`}>
                         <img
-                          src={`${"http://localhost:5000"}/${e.product.image}`}
+                          src={`${"https://e-commorce-bd.onrender.com"}/${e.product.image}`}
                           style={{ width: "60px" }}
                           alt=""
                         />

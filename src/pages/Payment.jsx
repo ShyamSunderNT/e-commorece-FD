@@ -19,7 +19,7 @@ const Payment = () => {
 
   async function fetchAddress() {
     try {
-      const { data } = await axios.get(`${"http://localhost:5000"}/api/address/${params.id}`, {
+      const { data } = await axios.get(`${"https://e-commorce-bd.onrender.com"}/api/address/${params.id}`, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -39,7 +39,7 @@ const Payment = () => {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        `${"http://localhost:5000"}/api/order/new/cod`,
+        `${"https://e-commorce-bd.onrender.com"}/api/order/new/cod`,
         {
           method,
           phone: address.phone,
@@ -143,7 +143,7 @@ const Payment = () => {
                 }}
                 key={i}
               >
-                <Image src={`${"http://localhost:5000"}/${e.product.image}`} alt="" width={60} />
+                <Image src={`${"https://e-commorce-bd.onrender.com"}/${e.product.image}`} alt="" width={60} />
                 <p>{e.product.title}</p>
                 <p>₹{e.product.price}</p>
                 <p>Quantity - {e.quantity}</p>

@@ -10,7 +10,7 @@ const AdminOrders = () => {
 
   async function fetchOrders() {
     try {
-      const { data } = await axios.get(`${"http://localhost:5000"}/api/order/admin/all`, {
+      const { data } = await axios.get(`${"https://e-commorce-bd.onrender.com"}/api/order/admin/all`, {
         headers: {
           token: localStorage.getItem("token"),
         },
@@ -32,7 +32,7 @@ const AdminOrders = () => {
       setLoading(true);
       try {
         const { data } = await axios.put(
-          `${"http://localhost:5000"}/api/order/${id}`,
+          `${"https://e-commorce-bd.onrender.com"}/api/order/${id}`,
           {},
           {
             headers: {

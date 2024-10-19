@@ -9,7 +9,7 @@ const Orders = () => {
     const navigate = useNavigate();
     async function fetchOrders() {
       try {
-        const { data } = await axios.get(`${"http://localhost:5000"}/api/order/all`, {
+        const { data } = await axios.get(`${"https://e-commorce-bd.onrender.com"}/api/order/all`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
               },

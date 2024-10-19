@@ -72,7 +72,7 @@ const AddProduct = ({
       myForm.append("category", category);
       myForm.append("image", image);
       try {
-        const { data } = await axios.post(`${"http://localhost:5000"}/api/product/new`, myForm, {
+        const { data } = await axios.post(`${"https://e-commorce-bd.onrender.com"}/api/product/new`, myForm, {
           headers: {
             token: localStorage.getItem("token"),
           },

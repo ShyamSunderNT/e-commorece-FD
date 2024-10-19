@@ -20,7 +20,7 @@ export const UserContextProvider = ({ children }) => {
 
   async function registerUser(name, email, password, navigate) {
     try {
-      const { data } = await axios.post("http://localhost:5000/api/user/register", {
+      const { data } = await axios.post("https://e-commorce-bd.onrender.com/api/user/register", {
         name,
         email,
         password,
@@ -41,7 +41,7 @@ export const UserContextProvider = ({ children }) => {
   async function verifyUser(otp, navigate) {
     const activationToken = localStorage.getItem("activationToken");
     try {
-      const { data } = await axios.post("http://localhost:5000/api/user/verify", {
+      const { data } = await axios.post("https://e-commorce-bd.onrender.com/api/user/verify", {
         activationToken,
         otp,
       });
@@ -57,7 +57,7 @@ export const UserContextProvider = ({ children }) => {
 
   async function userLogin(email, password, navigate) {
     try {
-      const { data } = await axios.post("http://localhost:5000/api/user/login", {
+      const { data } = await axios.post("https://e-commorce-bd.onrender.com/api/user/login", {
         email,
         password,
       });
@@ -84,7 +84,7 @@ export const UserContextProvider = ({ children }) => {
     }
 
     try {
-      const { data } = await axios.get("http://localhost:5000/api/user/me", {
+      const { data } = await axios.get("https://e-commorce-bd.onrender.com/api/user/me", {
         headers: {
           Authorization: `Bearer ${token}`, // Ensure correct header format
         },

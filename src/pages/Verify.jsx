@@ -13,11 +13,12 @@ const Verify = () => {
     await verifyUser(Number(otp), navigate);
   };
   return (
+    <div className='sigin-background'>
     <Container className="mt-4">
       <h2 className="mt-4">Verify Account</h2>
       <Form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Enter Otp</Form.Label>
+          <Form.Label className='si-name'>Enter Otp</Form.Label>
           <Form.Control
             type="number"
             placeholder="enter Otp"
@@ -27,9 +28,10 @@ const Verify = () => {
           />
         </Form.Group>
         <Button type="submit">Verify</Button> <br />
-        <Link to="/login">go to login page</Link>
+        <Link to="/login" className=" si-name">go to login page</Link>
       </Form>
     </Container>
+    </div>
   );
 };
 

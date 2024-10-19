@@ -16,7 +16,7 @@ const ProductCard = ({ product, admin }) => {
         if (confirm("Are you sure you want to delete this product")) {
           try {
             const { data } = await axios.delete(
-              `${"http://localhost:5000"}/api/product/${product._id}`,
+              `${"https://e-commorce-bd.onrender.com"}/api/product/${product._id}`,
               {
                 headers: {
                   token: localStorage.getItem("token"),
@@ -32,7 +32,7 @@ const ProductCard = ({ product, admin }) => {
         }
       };
 
-      const imageUrl = `${"http://localhost:5000"}/${product.image}`;
+      const imageUrl = `${"https://e-commorce-bd.onrender.com"}/${product.image}`;
     console.log(`Image URL: ${imageUrl}`);
 
     return (

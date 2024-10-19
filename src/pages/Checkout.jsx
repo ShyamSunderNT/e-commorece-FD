@@ -16,7 +16,7 @@ const Checkout = () => {
 
   async function fetchAddress() {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/address/all", {
+      const { data } = await axios.get("https://e-commorce-bd.onrender.com/api/address/all", {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -37,7 +37,7 @@ const Checkout = () => {
   const deleteHandler = async (id) => {
     if (confirm("Are you sure you want to delete this address!")) {
       try {
-        const { data } = await axios.delete(`${"http://localhost:5000"}/api/address/${id}`, {
+        const { data } = await axios.delete(`${"https://e-commorce-bd.onrender.com"}/api/address/${id}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
               },
@@ -113,7 +113,7 @@ const AddressModal = ({
       e.preventDefault();
       try {
         const { data } = await axios.post(
-          `${"http://localhost:5000"}/api/address/new`,
+          `${"https://e-commorce-bd.onrender.com"}/api/address/new`,
           { address, phone },
           {
             headers: {

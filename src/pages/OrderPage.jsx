@@ -12,7 +12,7 @@ const OrderPage = () => {
 
     async function fetchOrder() {
         try {
-          const { data } = await axios.get(`${"http://localhost:5000"}/api/order/${params.id}`, {
+          const { data } = await axios.get(`${"https://e-commorce-bd.onrender.com"}/api/order/${params.id}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
               },
@@ -61,7 +61,7 @@ const OrderPage = () => {
                       <td>
                         <Link to={`/product/${e.product._id}`}>
                           <img
-                            src={`${"http://localhost:5000"}/${e.product.image}`}
+                            src={`${"https://e-commorce-bd.onrender.com"}/${e.product.image}`}
                             alt=""
                             width={60}
                           />

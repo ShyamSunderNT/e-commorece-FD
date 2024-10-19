@@ -23,7 +23,7 @@ export const CartContextProvider = ({ children }) => {
     }
   
     try {
-      const { data } = await axios.get(`${"http://localhost:5000"}/api/cart/all`, {
+      const { data } = await axios.get(`${"https://e-commorce-bd.onrender.com"}/api/cart/all`, {
         headers: { Authorization: `Bearer ${token}` }, // Use Authorization header
       });
       setCart(data.cart);
@@ -50,7 +50,7 @@ export const CartContextProvider = ({ children }) => {
   
     try {
       const { data } = await axios.post(
-        `${"http://localhost:5000"}/api/cart/new`,
+        `${"https://e-commorce-bd.onrender.com"}/api/cart/new`,
         { product },
         { headers: { Authorization: `Bearer ${token}` } } // Use Authorization header
       );
@@ -78,7 +78,7 @@ export const CartContextProvider = ({ children }) => {
   
     try {
       await axios.put(
-        `${"http://localhost:5000"}/api/cart?action=${action}`,
+        `${"https://e-commorce-bd.onrender.com"}/api/cart?action=${action}`,
         { id },
         { headers: { Authorization: `Bearer ${token}` } } // Use Authorization header
       );
@@ -104,7 +104,7 @@ export const CartContextProvider = ({ children }) => {
     }
   
     try {
-      const { data } = await axios.delete(`${"http://localhost:5000"}/api/cart/${id}`, {
+      const { data } = await axios.delete(`${"https://e-commorce-bd.onrender.com"}/api/cart/${id}`, {
         headers: { Authorization: `Bearer ${token}` }, // Use Authorization header
       });
       toast.success(data.message);

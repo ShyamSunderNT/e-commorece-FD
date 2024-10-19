@@ -17,16 +17,6 @@ const ProductDetails = () => {
     const { isAuth, user } = UserData();
     const { addToCart } = CartData();
 
-    // async function fetchProduct() {
-    //     try {
-    //       const { data } = await axios.get(`${"http://localhost:5000"}/api/product/${params.id}`);
-    
-    //       setProduct(data.product);
-    //     } catch (error) {
-    //       console.log(error);
-    //     }
-    //   }
-
     async function fetchProduct() {
       try {
           const token = localStorage.getItem("token"); // Retrieve the token
@@ -37,7 +27,7 @@ const ProductDetails = () => {
               }
           };
   
-          const { data } = await axios.get(`${"http://localhost:5000"}/api/product/${params.id}`, config);
+          const { data } = await axios.get(`${"https://e-commorce-bd.onrender.com"}/api/product/${params.id}`, config);
   
           setProduct(data.product);
       } catch (error) {
@@ -47,33 +37,12 @@ const ProductDetails = () => {
   }
   
 
-      // async function updateStock() {
-      //   try {
-      //     const { data } = await axios.put(
-      //       `${"http://localhost:5000"}/api/product/${params.id}`,
-      //       { stock },
-      //       {
-      //         headers: {
-      //           token: localStorage.getItem("token"),
-      //         },
-      //       }
-      //     );
-    
-      //     toast.success(data.message);
-    
-      //     fetchProduct();
-      //     setStock("");
-      //   } catch (error) {
-      //     toast.error(error.response.data.message);
-      //   }
-      // }
-
       async function updateStock() {
         try {
             const token = localStorage.getItem("token"); // Retrieve the token
     
             const { data } = await axios.put(
-                `${"http://localhost:5000"}/api/product/${params.id}`,
+                `${"https://e-commorce-bd.onrender.com"}/api/product/${params.id}`,
                 { stock },
                 {
                     headers: {
@@ -105,7 +74,7 @@ const ProductDetails = () => {
         {product && (
           <Row className="mt-5">
             <Col md={6}>
-              <Image src={`${"http://localhost:5000"}/${product.image}`} alt="" fluid />
+              <Image src={`${"https://e-commorce-bd.onrender.com"}/${product.image}`} alt="" fluid />
             </Col>
             <Col md={6}>
               <h2>{product.title}</h2>

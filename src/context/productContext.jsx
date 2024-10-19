@@ -19,7 +19,7 @@ export const ProductContextProvider = ({ children }) => {
     async function fetchProducts() {
         try {
           const { data } = await axios.get(
-            `${"http://localhost:5000"}/api/product/all?search=${search}&category=${category}&price=${price}&page=${page}`
+            `${"https://e-commorce-bd.onrender.com"}/api/product/all?search=${search}&category=${category}&price=${price}&page=${page}`
           );
           setProducts(data.products);
           setTopProducts(data.mostSelling);
@@ -36,7 +36,7 @@ export const ProductContextProvider = ({ children }) => {
 
       async function fetchAdminProducts() {
         try {
-          const { data } = await axios.get(`${"http://localhost:5000"}/api/product/admin/all`);
+          const { data } = await axios.get(`${"https://e-commorce-bd.onrender.com"}/api/product/admin/all`);
           setAdminProducts(data.products);
           setLoading(false);
         } catch (error) {
