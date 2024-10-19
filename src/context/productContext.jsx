@@ -95,7 +95,9 @@ export const ProductContextProvider = ({ children }) => {
     const [page, setPage] = useState(1);
     const [adminProducts, setAdminProducts] = useState([]);
 
-    const token = localStorage.getItem("token"); // Retrieve the token from localStorage
+    const localToken = localStorage.getItem("token");
+    const sessionToken = sessionStorage.getItem("token");
+    const token = localToken || sessionToken; // Prioritize localStorage token, fallback to sessionStorage
 
     async function fetchProducts() {
         try {
