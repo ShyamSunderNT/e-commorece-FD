@@ -1,0 +1,20 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.login-background {
+    background-image: url('/path/to/your/image.jpg'); /* Update with your image path */
+    background-size: cover; /* Ensures the image covers the full area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Centers content */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+}
+
+.no-gap {
+    margin: 0; /* Removes default margin from Container */
+}

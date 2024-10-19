@@ -1,0 +1,59 @@
+.hints{
+    font-size:xx-large;
+    justify-content: center;
+    margin-left: 200px;
+    color: #fcfbfb;
+    font-weight: 900;
+  }
+
+  .home-background {
+    background-image: url('https://img.freepik.com/free-vector/abstract-realistic-technology-particle-background_23-2148420656.jpg'); /* Update with your image path */
+    background-size: cover; /* Adjust to cover the whole area */
+    background-position: center; /* Center the image */
+    min-height: 100vh; /* Ensure it takes full height */
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.login-background {
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/975/55/desktop-wallpaper-login-page-login.jpg'); /* Update with your image path */
+    background-size: cover; /* Ensures the image covers the full area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Centers content */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+}
+
+.no-gap {
+    margin: 0; /* Removes default margin from Container */
+}
+
+.text-colour{
+   color: aliceblue;
+   text-decoration: none;
+}
+
+.sigin-background {
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220112/pngtree-glass-morphim-effect-registration-banner-with-gradient-blue-image_934693.jpg'); /* Update with your image path */
+    background-size: cover; /* Ensures the image covers the full area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Centers content */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+}
+
+.si-name{
+    font-size: 20px;
+    color: #0a0a0a;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
