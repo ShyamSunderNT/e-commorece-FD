@@ -12,7 +12,7 @@ const AdminOrders = () => {
     try {
       const { data } = await axios.get(`${"https://e-commorce-bd.onrender.com"}/api/order/admin/all`, {
         headers: {
-          token: localStorage.getItem("token"),
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
 
@@ -36,7 +36,7 @@ const AdminOrders = () => {
           {},
           {
             headers: {
-              token: localStorage.getItem("token"),
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
           }
         );
