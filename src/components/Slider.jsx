@@ -1,15 +1,12 @@
 import { Carousel } from "react-bootstrap";
-import './Slider.css';// Import the CSS file
+
 
 const Slider = () => {
   return (
-    <Carousel className="custom-carousel">
+    <Carousel >
       
       <Carousel.Item>
         <img src="https://marketplace.canva.com/EAFIMHQ5yhE/1/0/1600w/canva-orange-and-teal-summer-sale-kids-fashion-bright-website-banner-L6kUMOWkkho.jpg" alt="img" className="d-block w-100" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src="https://stitchsway.com/wp-content/uploads/2024/07/Summer-Sale-Website-Banner-1-01-scaled.jpg" alt="img" className="d-block w-100" />
       </Carousel.Item>
     </Carousel>
   );
