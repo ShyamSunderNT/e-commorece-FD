@@ -43,6 +43,8 @@ import Home from '../pages/Home';
 import AdminOrders from './pages/AdminOrders';
 import AllData from './pages/AllData';
 import { ProductData } from '../context/productContext';
+import ProductForm from './pages/Addproduct';
+
 
 const Dashboard = ({ user }) => {
     const navigate = useNavigate();
@@ -65,6 +67,9 @@ const Dashboard = ({ user }) => {
                 </Tab>
                 <Tab eventKey="orders" title="Orders">
                     <AdminOrders />
+                </Tab>
+                <Tab eventKey="addProduct" title="Add Product">
+                    <ProductForm /> {/* Add ProductForm tab */}
                 </Tab>
             </Tabs>
         </Container>
