@@ -23,9 +23,11 @@ export const CartContextProvider = ({ children }) => {
     }
   
     try {
-      const { data } = await axios.get(`${"https://e-commorce-bd.onrender.com"}/api/cart/all`, {
-        headers: { Authorization: `Bearer ${token}` }, // Use Authorization header
-      });
+      const { data } = await axios.get(`${"https://e-commorce-bd.onrender.com"}/api/cart/all`, 
+        {
+          headers: { Authorization: `Bearer ${token}` } // Add token to headers if needed
+      }
+    );
       setCart(data.cart);
       setTotalItem(data.sumofQuantities);
       setSubTotal(data.subTotal);
@@ -50,7 +52,7 @@ export const CartContextProvider = ({ children }) => {
   
     try {
       const { data } = await axios.post(
-        `${"https://e-commorce-bd.onrender.com"}/api/cart/new`,
+        "https://e-commorce-bd.onrender.com/api/cart/new",
         { product },
         { headers: { Authorization: `Bearer ${token}` } } // Use Authorization header
       );
