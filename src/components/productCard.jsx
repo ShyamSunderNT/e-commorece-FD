@@ -50,7 +50,7 @@ const ProductCard = ({ product, admin }) => {
         </Card.Body>
   
         <ListGroup className="list-group-flush text-secondary" style={{ border: 'none' }}>
-          <ListGroup.Item>₹ {product.price}</ListGroup.Item>
+          <ListGroup.Item> Price ₹ : {product.price}</ListGroup.Item>
         </ListGroup>
   
         <Card.Body>
